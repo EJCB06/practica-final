@@ -2,6 +2,9 @@ site_name: IAW - Implantación de Aplicaciones Web
 site_description: Documentación y despliegue de prácticas del módulo
 site_author: Tu Nombre # Pon tu nombre aquí, bro
 
+repo_name: ejcb06/ejcb06.github.io
+repo_url: https://ejcb06.github.io/
+
 theme:
   name: material
   language: es # Todo en español

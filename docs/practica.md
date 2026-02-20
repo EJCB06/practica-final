@@ -48,6 +48,8 @@ chown -R www-data:www-data /var/www/html/* # Cambiamos el propietario para que n
 apt install mysql-server -y
 ```
 
+![](images/instalación%20de%20pila%20LAMP.png)
+
 ## Parte 2: Instalación de Herramientas y Monitorización
 Para esta parte tendríamos que haber ejecutado ya el script de arriba, es decir, ya tendríamos que tener la pila LAMP totalmente funcional.
 
@@ -69,7 +71,7 @@ echo "phpmyadmin phpmyadmin/app-password-confirm password $PHPMYADMIN_APP_PASSWO
 
 apt update
 apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
-Con esto podemos comprobar que la instalación de phpMyAdmin se ha hecho correctamente:
+# Con esto podemos comprobar que la instalación de phpMyAdmin se ha hecho correctamente:
 
 # Instalación de Adminer
 
@@ -78,8 +80,13 @@ mkdir -p /var/www/html/adminer
 # Descargamos el archivo de Adminer y lo renombramos a index.php
 wget [https://github.com/vrana/adminer/releases/download/v5.4.1/adminer-5.4.1-mysql.php](https://github.com/vrana/adminer/releases/download/v5.4.1/adminer-5.4.1-mysql.php) -P /var/www/html/adminer
 mv /var/www/html/adminer/adminer-5.4.1-mysql.php /var/www/html/adminer/index.php
-Comprobación de Adminer:
+```
 
+![](images/phpmyadmin.png)
+
+### Comprobación de Adminer:
+
+```bash
 # Creación de Base de Datos de Ejemplo
 # Esto no es realmente necesario pero al hacerlo podemos tener una primera toma de contacto con las variables de nuestro archivo .env.
 
@@ -113,3 +120,11 @@ cp ../htaccess/.htaccess /var/www/html/stats
 
 systemctl restart apache2
 ```
+
+![](images/adminer.png)
+
+
+
+### Comprobación final 
+
+![](images/stats.png)
