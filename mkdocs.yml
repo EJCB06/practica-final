@@ -1,9 +1,52 @@
-site_name: IAW
+site_name: IAW - Implantación de Aplicaciones Web
+site_description: Documentación y despliegue de prácticas del módulo
+site_author: Tu Nombre # Pon tu nombre aquí, bro
 
+theme:
+  name: material
+  language: es # Todo en español
+  
+  # Le ponemos un icono de consola de comandos arriba a la izquierda
+  icon:
+    logo: material/console
+  
+  # Configuración de colores: Modo oscuro estilo "Matrix/Hacker" y opción de modo claro
+  palette:
+    # 1. Modo oscuro (Slate)
+    - scheme: slate
+      primary: black
+      accent: cyan # El cyan sobre negro queda espectacular
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo claro
+    
+    # 2. Modo claro (Por si alguien prefiere que no le quemen los ojos de día)
+    - scheme: default
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo oscuro
+
+  # Funcionalidades extra del tema (pestañas, botón de volver arriba, etc.)
+  features:
+    - navigation.tabs # Pestañas arriba
+    - navigation.tabs.sticky # Las pestañas te persiguen al hacer scroll
+    - navigation.top # Botón de la flechita para volver arriba del todo
+    - content.code.copy # ¡IMPORTANTÍSIMO! Botón de "Copiar" en los bloques de código
+
+# Extensiones de Markdown para que el código y las notas se vean de locos
+markdown_extensions:
+  - admonition # Para poner cajitas de "Nota", "Peligro", "Info"
+  - pymdownx.details # Para hacer cajitas desplegables
+  - pymdownx.superfences # Necesario para que los bloques de código se rendericen perfectos
+  - pymdownx.highlight: # Resaltado de sintaxis (colores en el código)
+      anchor_linenums: true
+
+# Menú de navegación con iconos para darle rollo
 nav:
-    - Principal: index.md
-    - Acerca de: about.md
-    - Practica 1: practica.md
-    - Practica 2: practica2.md
-
-theme: material
+  - Principal: index.md
+  - Prácticas:
+      - Práctica 1: practica.md
+      - Práctica 2: practica2.md
+  - ℹ️ Acerca de: about.md
